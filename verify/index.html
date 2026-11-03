@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a download | OneLifeStack Developer</title>
+<meta name="description" content="Package names, signing certificates and checksums for OneLifeStack beta apps.">
+<meta name="theme-color" content="#f2f7f1" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#080909" media="(prefers-color-scheme: dark)">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'">
+<link rel="canonical" href="https://developer.onelifestack.com/verify/">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icon-96.png" sizes="96x96" type="image/png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="preload" href="/assets/fonts/manrope-400.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="/assets/fonts/manrope-700.ttf" as="font" type="font/ttf" crossorigin>
+<meta property="og:type" content="website"><meta property="og:site_name" content="OneLifeStack Developer"><meta property="og:title" content="Check a download | OneLifeStack Developer">
+<meta property="og:description" content="Package names, signing certificates and checksums for OneLifeStack beta apps."><meta property="og:url" content="https://developer.onelifestack.com/verify/"><meta property="og:image" content="https://developer.onelifestack.com/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap"><a class="brand" href="/"><img src="/assets/icon-96.png" width="32" height="32" alt="">OneLifeStack <span>Developer</span></a>
+<nav class="main" aria-label="Main"><a href="/#apps">Apps</a><a href="/#principles">How we build</a><a href="/#about">About</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a></nav></div></header>
+<main id="main">
+<div class="article"><div class="wrap"><h1>Check a download</h1>
+<p class="lede">Beta versions of our apps are downloaded from each app's website rather than Google Play. Use these values to make sure a file came from us and was not changed.</p>
+<div class="card verify" id="verify-pocketful"><h2>Pocketful</h2><dl>
+<dt>Package name</dt><dd><code>com.onelifestack.pocketful</code></dd>
+<dt>Beta signing certificate (SHA-256)</dt><dd><code>80:46:E3:44:2C:D9:17:4D:50:E3:AE:7F:54:6E:4E:2F:D7:20:7D:12:09:82:E4:E4:DE:FB:80:A4:DB:57:DF:5E</code></dd>
+<dt>Current beta file</dt><dd><a href="https://github.com/onelifestack/pocketful-site/releases/download/v0.9.0-beta.6/pocketful-0.9.0-beta.6.apk">pocketful-0.9.0-beta.6.apk</a>, released 2026-11-01</dd><dt>File checksum (SHA-256)</dt><dd><code>82e1901d2484181cb2b63b3d35fa1b199cbdb1f06529213fec6fb1617eea70b9</code></dd>
+</dl></div><div class="card verify" id="verify-lots"><h2>Lots</h2><dl>
+<dt>Package name</dt><dd><code>com.onelifestack.lots</code></dd>
+<dt>Beta signing certificate (SHA-256)</dt><dd><code>9D:8C:A9:CB:76:65:39:5F:35:61:BC:F3:BF:11:5B:02:D4:03:04:67:4C:CC:4F:71:F7:DF:2C:0A:57:C6:2D:69</code></dd>
+<dt>Current beta file</dt><dd><a href="https://github.com/onelifestack/lots-site/releases/download/v0.9.0-beta.1/lots-0.9.0-beta.1.apk">lots-0.9.0-beta.1.apk</a>, released 2026-11-01</dd><dt>File checksum (SHA-256)</dt><dd><code>420cb1661dae6eb29f2d2bd11a70eef178e4ea81bad0d31c3080f39e11b5f1cf</code></dd>
+</dl></div>
+<h2>How to check</h2>
+<p><strong>The file.</strong> On a computer, run <code>sha256sum file.apk</code> (Linux), <code>shasum -a 256 file.apk</code> (macOS) or <code>certutil -hashfile file.apk SHA256</code> (Windows). The result must match the checksum above.</p>
+<p><strong>The signature.</strong> With the Android SDK, run <code>apksigner verify --print-certs file.apk</code>. The certificate SHA-256 digest must match the one above. Any later beta of the same app is signed with the same certificate, so Android will only install an update that came from us.</p>
+<p><strong>Google Play builds</strong> are signed by Google Play app signing with a different key from the betas. Android will not install a Play build over a beta, or a beta over a Play build. Export a backup in the app, uninstall it, install the other build, then import your backup.</p></div></div>
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="brand" href="/"><img src="/assets/icon-96.png" width="32" height="32" alt="">OneLifeStack</a>
+<p>Small, private apps that keep your life on your phone.</p></div>
+<div><h2>Apps</h2><ul><li><a href="https://pocketful.onelifestack.com/">Pocketful</a></li><li><a href="https://lots.onelifestack.com/">Lots</a></li><li><a href="https://onelifestack.com">onelifestack.com</a></li></ul></div>
+<div><h2>Help</h2><ul><li><a href="/support/">Support</a></li><li><a href="/verify/">Check a download</a></li><li><a href="/privacy/">Privacy policy</a></li><li><a href="mailto:hello@onelifestack.com">hello@onelifestack.com</a></li></ul></div>
+<small>© 2026 Omprakash Gautam (OneLifeStack). Google Play and the Google Play logo are trademarks of Google LLC.</small>
+</div></footer></body></html>
